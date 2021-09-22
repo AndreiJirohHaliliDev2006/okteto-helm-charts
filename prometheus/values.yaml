@@ -10,32 +10,16 @@ prometheus:
         dev.okteto.com/private: "true"
       hosts:
         - localhost
-    resources:
-      limits:
-        memory: "128Mi"
-        cpu: "200m"
-
-  configmapReload:
-    alertmanager:
-        resources:
-          limits:
-            memory: "64Mi"
-            cpu: "100m"  
-    prometheus:
-        resources:
-          limits:
-            memory: "64Mi"
-            cpu: "100m"
 
   kubeStateMetrics:
     enabled: false
-  
+
   nodeExporter:
     enabled: false
-  
+
   pushgateway:
     enabled: false
-  
+
   server:
     enabled: true
     persistentVolume:
@@ -47,13 +31,9 @@ prometheus:
         dev.okteto.com/private: "true"
       hosts:
         - localhost
-    resources:
-      limits:
-        memory: "128Mi"
-        cpu: "200m"
   rbac:
     create: false
-  
+
   serviceAccounts:
     alertmanager:
       create: false

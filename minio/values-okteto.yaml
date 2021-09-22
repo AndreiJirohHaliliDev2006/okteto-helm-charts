@@ -1,7 +1,6 @@
 minio:
-  mode: standalone
-  accessKey: ""
-  secretKey: ""
+  accessKey: "myaccesskey"
+  secretKey: "mysecretkey"
   replicas: 1
   persistence:
     size: 1Gi
@@ -13,14 +12,3 @@ minio:
     name: okteto
     policy: none
     purge: false
-
-  resources:
-    limits:
-      memory: 256Mi
-      cpu: 500m
-
-
-  
-  
-
-  
